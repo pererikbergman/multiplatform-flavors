@@ -23,6 +23,10 @@ kotlin {
         }
     }
 
+    val flavor: String = (project.findProperty("flavor") as? String) ?: "dev"
+    println("flavor: $flavor")
+    // ./gradlew build -Pflavor=prod
+
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
