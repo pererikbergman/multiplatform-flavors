@@ -17,4 +17,4 @@ dependencyResolutionManagement {
 rootProject.name = "Flavors"
 include(":androidApp")
 include(":shared")
-include(":config:development")
+include(":config:development", ":config:production")

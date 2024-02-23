@@ -23,15 +23,9 @@ kotlin {
         }
     }
 
-    // ./gradlew clean installDebug -Pflavor=development
-    // ./gradlew clean installDebug -Pflavor=production
-    val flavor: String = (project.findProperty("flavor") as? String) ?: "development"
-    println("Flavor: $flavor")
-
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
-            implementation(project(":config:$flavor"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
