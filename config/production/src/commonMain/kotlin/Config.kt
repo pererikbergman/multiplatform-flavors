@@ -1,3 +1,3 @@
 object Config {
-    val type:String = "production"
+    const val ENVIRONMENT:String = "PROD"
 }
