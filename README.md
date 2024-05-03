@@ -58,7 +58,25 @@ kotlin {
 
 ### Android
 
-### Changing the App name
+### Changing the App name using XML (supports localizing)
+
+Create a `strings.xml` file for each flavor. E.g.:
+
+1. `config/development/androidMain/values/res/strings.xml`
+2. `config/production/androidMain/values/res/strings.xml`
+
+Add a string with the name `app_name` like you normally would.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KMP Flavor Dev</string>
+</resources>
+```
+
+This string can now be used in AndroidManifest.xml like you normally would
+
+### Changing the App name using Gradle
 ```kotlin
 android {
     namespace = "com.rakangsoftware.flavors"

@@ -63,10 +63,6 @@ android {
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        when (flavor) {
-            "development" -> resValue("string", "app_name", "KMP Flavor Dev")
-            else -> resValue("string", "app_name", "KMP Flavor")
-        }
         applicationId = "com.rakangsoftware.flavors"
         applicationIdSuffix = suffix
         minSdk = libs.versions.android.minSdk.get().toInt()
